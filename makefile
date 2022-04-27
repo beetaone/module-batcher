@@ -1,5 +1,5 @@
 SHELL := /bin/bash
-MODULE=weevenetwork/weeve-batcher
+MODULE=weevenetwork/batcher
 create_image:
 	docker build -t ${MODULE} . -f image/Dockerfile
 .phony: create_image
