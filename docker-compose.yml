@@ -5,7 +5,7 @@ services:
       context: .
       dockerfile: Dockerfile
     environment:
-      MODULE_NAME: weeve-batcher
+      MODULE_NAME: batcher
       MODULE_TYPE: PROCESS
       EGRESS_URL: https://hookb.in/DrrdzwQwXgIdNNEwggLo
       FILE_SIZE_BATCH_TRIGGER: 1

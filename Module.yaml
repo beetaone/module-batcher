@@ -12,7 +12,7 @@ categories:
   - id: category
     name: Policies
 image:
-  name: weevenetwork/weeve-batcher
+  name: weevenetwork/batcher
   tag: latest
 environments:
   - key: FILE_SIZE_BATCH_TRIGGER

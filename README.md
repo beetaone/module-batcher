@@ -4,7 +4,7 @@
 | -------------- | --------------------------------------------------------------------------------- |
 | Name           | Batcher                                                                           |
 | Version        | v0.0.2                                                                            |
-| Dockerhub Link | [weevenetwork/weeve-batcher](https://hub.docker.com/r/weevenetwork/weeve-batcher) |
+| Dockerhub Link | [weevenetwork/batcher](https://hub.docker.com/r/weevenetwork/batcher) |
 | authors        | Jakub Grzelak                                                                     |
 
 - [Batcher](#batcher)
@@ -54,7 +54,7 @@ Other features required for establishing the inter-container communication betwe
 ## Dependencies
 
 ```txt
-Flask==1.1.1
+Flask
 requests
 python-dotenv
 ```
@@ -113,9 +113,9 @@ Example:
 version: "3"
 services:
   batcher:
-    image: weevenetwork/weeve-batcher
+    image: weevenetwork/batcher
     environment:
-      MODULE_NAME: weeve-batcher
+      MODULE_NAME: batcher
       MODULE_TYPE: PROCESS
       EGRESS_URL: https://hookb.in/DrrdzwQwXgIdNNEwggLo
       FILE_SIZE_BATCH_TRIGGER: 1
