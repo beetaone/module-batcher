@@ -7,6 +7,9 @@ from logging import getLogger
 from bottle import run
 from api import setup_logging
 
+from module.module import frequency_processing
+from module.params import PARAMS
+
 setup_logging()
 log = getLogger("main")
 
@@ -18,6 +21,10 @@ def main():
         getenv("INGRESS_PORT"),
         getenv("EGRESS_URLS"),
     )
+
+    # start processing interval
+    if PARAMS['FREQUENCY_BATCH_TRIGGER'] != 0.0:
+        frequency_processing()
 
     # start the server
     run(
