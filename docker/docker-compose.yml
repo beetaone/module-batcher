@@ -1,0 +1,17 @@
+version: "3.0"
+services:
+  batcher:
+    build:
+      context: ../
+      dockerfile: docker/Dockerfile
+    environment:
+      MODULE_NAME: "batcher"
+      MODULE_TYPE: "Processing"
+      INGRESS_HOST: "0.0.0.0"
+      INGRESS_PORT: "80"
+      EGRESS_URLS: "https://testdockercompose.free.beeceptor.com"
+      FILE_SIZE_BATCH_TRIGGER: 1
+      FREQUENCY_BATCH_TRIGGER: 10
+      FREQUENCY_TIME_UNIT: "s"
+    ports:
+      - 80:80

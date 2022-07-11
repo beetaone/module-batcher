@@ -1,50 +1,48 @@
-version: 1.0.0
-name: Batcher
-description: Data collection
-icon: https://icons-020-demo.s3.eu-central-1.amazonaws.com/mi_batcher_process.png
-type: process
-tags:
-  - Batcher
-  - process
-  - Data
-  - collection
-categories:
-  - id: category
-    name: Policies
+displayName: 'Batcher'       # Display name for the module that will be displayed in the UI.
+moduleName: 'batcher'        # Module name that will be used to reference the module, and uniquely identify the module and their versions.
+description: 'Data collection and batching.'       # Module description that will be displayed in the UI.
+versionName: 'v1.0.0'                    # Module version name that will be used to reference the module version, and uniquely identify the module version with a common name.
+isPublic: true                          # Boolean value that indicates if the module is Public or Private.
+categories:                             # Array of category that will be used to group the module in the UI.
+  - 'Policies'
+type: 'Processing'      # Module type (Input, Processing, Output) that will be used to group the module in the UI.
 image:
-  name: weevenetwork/batcher
-  tag: latest
-environments:
-  - key: FILE_SIZE_BATCH_TRIGGER
-    description: Choose the max. file size for batch trigger (if 0, no limit).
-    value: ''
-    default: 1024
-    type: float
-    name: File Size Batch Trigger (Kb)
-  - key: FREQUENCY_BATCH_TRIGGER
+  name: 'weevenetwork/batcher'     # Image name from the docker registry.
+  tag: 'v1.0.0'                               # Image tag from the docker registry.
+  homepage: 'https://hub.docker.com/r/weevenetwork/batcher'      # Image homepage from the docker registry.
+repository: 'https://github.com/weeve-modules/batcher'     # Repository URL to source code.
+envs:                                   # Array of environment variables that will be used to configure the module. Also used to show related fields on the UI.
+  - name: File Size Batch Trigger (Kb)                   # name of the field to be displayed on the UI.
+    key: FILE_SIZE_BATCH_TRIGGER                # key to set in the environment variables.
+    description: Choose the max. file size for batch trigger (if 0, no limit).     # Description/helper text for the field.
+    value: 1024                         # Value to be set in the environment variables.
+    type: 'number'                    # Type of the field. Possible values are: ['text', 'select', 'boolean', 'date', 'time', 'dateTime-local', 'number', 'multiple', 'CSV', 'file']
+    options: []
+    dependencies: []
+  - name: Frequency Batch Trigger
+    key: FREQUENCY_BATCH_TRIGGER
     description: Length of time interval for collecting data into batches.
-    value: ''
-    default: 2
-    type: float
-    name: Frequency Batch Trigger
-  - key: FREQUENCY_TIME_UNIT
+    value: 2
+    type: 'number'
+    options: []
+    dependencies: []
+  - name: Frequency Time Unit
+    key: FREQUENCY_TIME_UNIT
     description: Unit of a time interval.
-    value: ''
-    default: 2
-    type: enum
+    value: 's'
+    type: 'select'
     options:
       - ms
       - s
       - m
       - h
       - d
-    name: Frequency Time Unit
-commands: []
-document:
-  ports: []
-  volumes: []
-  restart_policy:
-    condition: on-failure
-    delay: 10s
-    max_attempts: 3
-    window: 120s
+    dependencies: []
+ports: []
+mounts: []
+tags:                                   # Array of tags.
+  - Batcher
+  - process
+  - Data
+  - collection
+icon: 'https://icons-020-demo.s3.eu-central-1.amazonaws.com/mi_batcher_process.png'    # Icon URL that will be displayed in the UI.
