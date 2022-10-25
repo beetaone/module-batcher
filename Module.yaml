@@ -15,14 +15,14 @@ envs:                                   # Array of environment variables that wi
   - name: File Size Batch Trigger (Kb)                   # name of the field to be displayed on the UI.
     key: FILE_SIZE_BATCH_TRIGGER                # key to set in the environment variables.
     description: Choose the max. file size for batch trigger (if 0, no limit).     # Description/helper text for the field.
-    value: 1024                         # Value to be set in the environment variables.
+    value: '1024'                         # Value to be set in the environment variables.
     type: 'number'                    # Type of the field. Possible values are: ['text', 'select', 'boolean', 'date', 'time', 'dateTime-local', 'number', 'multiple', 'CSV', 'file']
     options: []
     dependencies: []
   - name: Frequency Batch Trigger
     key: FREQUENCY_BATCH_TRIGGER
     description: Length of time interval for collecting data into batches.
-    value: 2
+    value: '2'
     type: 'number'
     options: []
     dependencies: []
