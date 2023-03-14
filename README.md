@@ -3,7 +3,7 @@
 |                |                                       |
 | -------------- | ------------------------------------- |
 | Name           | Batcher                           |
-| Version        | v1.0.0                                |
+| Version        | v1.0.1                                |
 | DockerHub | [weevenetwork/batcher](https://hub.docker.com/r/weevenetwork/batcher) |
 | authors        | Jakub Grzelak                          |
 
