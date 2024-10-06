@@ -4,14 +4,14 @@
 | -------------- | ------------------------------------- |
 | Name           | Batcher                           |
 | Version        | v1.0.1                                |
-| DockerHub | [weevenetwork/batcher](https://hub.docker.com/r/weevenetwork/batcher) |
+| DockerHub | [beetaone/batcher](https://hub.docker.com/r/beetaone/batcher) |
 | authors        | Jakub Grzelak                          |
 
 - [Batcher](#batcher)
   - [Description](#description)
   - [Environment Variables](#environment-variables)
     - [Module Specific](#module-specific)
-    - [Set by the weeve Agent on the edge-node](#set-by-the-weeve-agent-on-the-edge-node)
+    - [Set by the beetaone Agent on the edge-node](#set-by-the-beetaone-agent-on-the-edge-node)
   - [Dependencies](#dependencies)
   - [Input](#input)
   - [Output](#output)
@@ -25,7 +25,7 @@ Batches could be defined by either a time frequency of data arrival or a file si
 
 ### Module Specific
 
-The following module configurations can be provided in a data service designer section on weeve platform:
+The following module configurations can be provided in a data service designer section on beetaone platform:
 
 | Name                    | Environment Variables   | type   | Description                                              |
 | ----------------------- | ----------------------- | ------ | -------------------------------------------------------- |
@@ -34,9 +34,9 @@ The following module configurations can be provided in a data service designer s
 | Frequency Time Unit     | FREQUENCY_TIME_UNIT     | string | Unit of a time interval (ms - milliseconds, s - seconds, m - minutes, h - hours, d - days)  |
 
 
-### Set by the weeve Agent on the edge-node
+### Set by the beetaone Agent on the edge-node
 
-Other features required for establishing the inter-container communication between modules in a data service are set by weeve agent.
+Other features required for establishing the inter-container communication between modules in a data service are set by beetaone agent.
 
 | Environment Variables | type   | Description                                    |
 | --------------------- | ------ | ---------------------------------------------- |

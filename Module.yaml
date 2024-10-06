@@ -7,10 +7,10 @@ categories:                             # Array of category that will be used to
   - 'Policies'
 type: 'Processing'      # Module type (Input, Processing, Output) that will be used to group the module in the UI.
 image:
-  name: 'weevenetwork/batcher'     # Image name from the docker registry.
+  name: 'beetaone/batcher'     # Image name from the docker registry.
   tag: 'v1.0.1'                               # Image tag from the docker registry.
-  homepage: 'https://hub.docker.com/r/weevenetwork/batcher'      # Image homepage from the docker registry.
-repository: 'https://github.com/weeve-modules/batcher'     # Repository URL to source code.
+  homepage: 'https://hub.docker.com/r/beetaone/batcher'      # Image homepage from the docker registry.
+repository: 'https://github.com/beetaone/module-batcher'     # Repository URL to source code.
 envs:                                   # Array of environment variables that will be used to configure the module. Also used to show related fields on the UI.
   - name: File Size Batch Trigger (Kb)                   # name of the field to be displayed on the UI.
     key: FILE_SIZE_BATCH_TRIGGER                # key to set in the environment variables.
@@ -49,4 +49,4 @@ tags:                                   # Array of tags.
   - process
   - Data
   - collection
-icon: 'https://icons-020-demo.s3.eu-central-1.amazonaws.com/mi_batcher_process.png'    # Icon URL that will be displayed in the UI.
+icon: 'https://icons-020-demo.s3.eu-central-1.amazonaws.com/mi_batcher_process.png'    # Icon URL that will be displayed in the UI.he UI.
